@@ -1,0 +1,32 @@
+th {
+    font-weight:bold;
+    font-size: 180%;
+    color:white;
+    background-color: black;
+    padding: 15px;
+    text-align: center;
+}
+
+h3 {
+    margin-left: 15px;
+}
+img.setimgsize {
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+
+table {
+    background-color: beige;
+}
+
+p.txtright {
+    text-align: right;
+}
+
+ul {
+    margin-top: 0px;
+}
