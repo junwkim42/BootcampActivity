@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1. decide what our page will play
+            -> moves will be stored in the array[3]
+            -> pick random move
+            2. wait for user input
+             -> input will be button type
+             -> 3 buttons indicating rock paper scissors each
+             -> get button value through var x = document.getElementById("myBtn").value;
+            3. compare and print result as alert
+            ->if page plays rock 
+            ->compare first character
+        */
+        var gameItems = ["rock", "paper", "scissors"];
+        var pMove;
+        var uInput;
+        for (var i = 0;i > -1 ; i++){
+            pMove = gameItems[Math.floor(Math.random() * 3)];
+            uInput = document.getElementById("myBtn").value;
+
+        }
+
+    </script>
+</body>
+</html>
