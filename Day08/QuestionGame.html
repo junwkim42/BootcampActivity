@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var qna = [{q: "My favorite hobby is game", a: true},
+                    {q: "Why am I so sleepy?", a: true},
+                    {q: "My dog is the cutest dog in the world", a: true},
+                    {q: "Workout makes you fat", a: false}];
+
+        var qBoxEl = document.getElementById("qBox");
+        var aBoxEl = document.getElementById("aBox");
+        var sBoxEl = document.getElementById("sBox");
+        var qIndex = 0;
+        var score = 0;
+
+        qBoxEl.textContent = qna[0].q;
+
+        document.onkeyup = function(event){
+            var press = event.key;
+
+            if (press == qna[qIndex].a){
+                aBoxEl.textContent = "good job!";
+                score++;
+            }
+            else{
+                aBoxEl.textContent = "wrong!";
+            }
+
+            qIndex++;
+            if (qIndex >= qna.length)
+            {
+                sBoxEl.textContent = score;
+                return ;
+            }
+            else {
+                var newQuestion = qna[qIndex].q;
+                qBoxEl.textContent = newQuestion;
+            }
+        }
+
+/* 
+        var answer;
+        for(var qnum = 0; qnum < qna.length; qnum++){
+            answer = confirm(qna[qnum].q);
+            if (answer == qna[qnum].a){
+                alert("correct");
+            }
+            else{
+                alert("wrong");
+            }
+*/
+        }
+    </script>
+</body>
+</html>
