@@ -1,0 +1,25 @@
+<html>
+   <head>
+       <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script></script>
+   </head>
+</html>
+<script>
+   $.ajax({
+       url: "http://www.omdbapi.com/?s=Matrix&y=&plot=short&apikey=trilogy",
+       method: "GET"
+   }).then( function( response ){
+       // process response
+       console.log( "response :", response);
+       console.log(response.Search[5].Title);
+   });
+
+   $.ajax({
+       url: "https://pokeapi.co/api/v2/ability/150/",
+       method: "GET"
+   }).then( function( response ){
+       // process response
+       console.log( "response :", response);
+       console.log( "response :", response.flavor_text_entries[8].flavor_text);
+   });
+</script>
+</html>
